@@ -19,6 +19,10 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
 
+app.use('/', (_, res) => {
+    res.status(200).json({message: 'Server is live'})
+})
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
