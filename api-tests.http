@@ -1,0 +1,51 @@
+### Sign up a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "maheshmuttinti@gmail.com",
+    "name": "Mahesh Muttinti",
+    "password": "Mahesh@1999"
+}
+
+### Log in as an existing user
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "maheshmuttinti@gmail.com",
+  "password": "Mahesh@1999"
+}
+
+### Create a new task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzhhMDM5Y2MxY2IxYjRhMmE4MzM4NyIsImlhdCI6MTc0MTIwMTY2NywiZXhwIjoxNzQxMjA1MjY3fQ.dnHot4tQmsXjuvstXVQptRm0fl41jDUVUpMk0eMThu0
+
+{
+  "title": "Complete assignment",
+  "description": "Finish the full stack task manager app"
+}
+
+### Get all tasks for the logged-in user
+GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzhhMDM5Y2MxY2IxYjRhMmE4MzM4NyIsImlhdCI6MTc0MTIwMTY2NywiZXhwIjoxNzQxMjA1MjY3fQ.dnHot4tQmsXjuvstXVQptRm0fl41jDUVUpMk0eMThu0
+
+### Get a specific task by ID
+GET http://localhost:3000/tasks/67c8a5c9d9cd275822c70c8f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzhhMDM5Y2MxY2IxYjRhMmE4MzM4NyIsImlhdCI6MTc0MTIwMTY2NywiZXhwIjoxNzQxMjA1MjY3fQ.dnHot4tQmsXjuvstXVQptRm0fl41jDUVUpMk0eMThu0
+
+### Update an existing task
+PUT http://localhost:3000/tasks/67c8a5c9d9cd275822c70c8f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzhhMDM5Y2MxY2IxYjRhMmE4MzM4NyIsImlhdCI6MTc0MTIwMTY2NywiZXhwIjoxNzQxMjA1MjY3fQ.dnHot4tQmsXjuvstXVQptRm0fl41jDUVUpMk0eMThu0
+Content-Type: application/json
+
+{
+  "title": "Update assignment",
+  "description": "Refine and test the app"
+}
+
+
+### Delete a task
+DELETE http://localhost:3000/tasks/67c8a5c9d9cd275822c70c8f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzhhMDM5Y2MxY2IxYjRhMmE4MzM4NyIsImlhdCI6MTc0MTIwMTY2NywiZXhwIjoxNzQxMjA1MjY3fQ.dnHot4tQmsXjuvstXVQptRm0fl41jDUVUpMk0eMThu0
