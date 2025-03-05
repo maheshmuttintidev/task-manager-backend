@@ -35,6 +35,7 @@ cd task-manager-backend
 `yarn`
 
 ### 3. Create `.env` file
+
 Create a `.env` file in the root of your project and add the following environment variables:
 
 ```bash
@@ -52,7 +53,6 @@ JWT_SECRET=your_jwt_secret_key
 
 The server will start on `http://localhost:3000`.
 
-
 ---
 
 ## API Endpoints
@@ -65,6 +65,7 @@ The server will start on `http://localhost:3000`.
 - **Method**: `POST`
 - **Description**: Register a new user.
 - **Request Body**:
+
 ```json
 {
   "name": "Pickolo Sama",
@@ -73,31 +74,31 @@ The server will start on `http://localhost:3000`.
 }
 ```
 
-
 #### 2. Login
 
 - **URL**: `/auth/login`
 - **Method**: `POST`
 - **Description**: Authenticate a user and get a JWT token.
 - **Request Body**:
+
 ```json
 {
   "email": "pickolosama@dragonballdiama.com",
   "password": "pickolosama#sensei"
 }
 ```
+
 - **Response**:
+
 ```json
 {
   "token": "<your_jwt_token>"
 }
 ```
 
-
 ### Task Management (Protected Routes)
 
 > All task routes require the `Authorization: Bearer <JWT>` header.
-
 
 #### 1. Create a Task
 
@@ -105,6 +106,7 @@ The server will start on `http://localhost:3000`.
 - **Method**: `POST`
 - **Description**: Create a new task.
 - **Request Body**:
+
 ```json
 {
   "title": "Create Dragon Balls",
@@ -130,6 +132,7 @@ The server will start on `http://localhost:3000`.
 - **Method**: `PUT`
 - **Description**: Update a task by its ID.
 - **Request Body**:
+
 ```json
 {
   "title": "Updated task title",

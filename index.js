@@ -2,12 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const connectDB = require('./config/db')
-
+const connectDB = require('./config/db');
 
 const authRoutes = require('./routes/auth');
-const taskRoutes = require('./routes/tasks')
-
+const taskRoutes = require('./routes/tasks');
 
 // Connect to the mongodb database
 connectDB();
@@ -20,8 +18,8 @@ app.use(cors());
 app.use(morgan('dev'));
 
 app.use('/', (_, res) => {
-    res.status(200).json({message: 'Server is live'})
-})
+  res.status(200).json({ message: 'Server is live' });
+});
 
 // Routes
 app.use('/auth', authRoutes);
