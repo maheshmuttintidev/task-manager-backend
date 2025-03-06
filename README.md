@@ -26,7 +26,7 @@ This is the backend API for a Full Stack Task Manager app built using Node.js, E
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/task-manager-backend.git
+git clone https://github.com/maheshmuttintidev/task-manager-backend
 cd task-manager-backend
 ```
 
@@ -40,7 +40,7 @@ Create a `.env` file in the root of your project and add the following environme
 
 ```bash
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/task-manager
+MONGO_URI=mongodb://localhost:27017/
 JWT_SECRET=your_jwt_secret_key
 ```
 
